@@ -12,7 +12,8 @@
   img {
   position: absolute;
   opacity: 1.0;
-  height:40px;
+  height:60px;
+  weight:40px;
   right:10px;
   }
  .alert {
@@ -114,7 +115,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Navbar -->
 <div class="topnav">
     <a class="active">Enterprise Risk Management</a>
-    <img  src="https://zeevector.com/wp-content/uploads/Citi-Logo-White-PNG-387x258.png" alt="citiLogo" width="40" height="30">
+    <img  src="https://lh4.googleusercontent.com/proxy/UzOkUQYB-BUET2-hiESkvM4KeVxj4JB5cyVbWnB4U82ggaJFZxZ74bySqefxjAkH8Fm7VnzTA97rh4BW0CAEYXi-oo5ZUYASrA" alt="citiLogo" width="40" height="30">
 </div>
 <hr class="rounded">
 
@@ -232,6 +233,9 @@ document.getElementById("success").hidden = false;
 document.getElementById("action").style.display = "none";
 document.getElementById("individualRecord").style.display = "none";
 document.getElementById("taskView").style.display = "none";
+var element = document.getElementById("report");
+element.innerHTML="";
+$('<appian-report />').attr("reportUrlStub", "45sFQQ").on("submit").appendTo("#report");
 document.getElementById("home").style.display = "inline";
 
   }
