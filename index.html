@@ -1,58 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>W3.CSS Template</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+  img {
+  position: absolute;
+  opacity: 1.0;
+  height:40px;
+  right:10px;
+  }
+ .alert {
+  padding: 20px;
+  background-color: #008755;
+  color: white;
+
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+  hr.rounded {
+  border-top: 8px solid white;
+  border-radius: 5px;
+  margin-top:0;
+}
+  .topnav {
+  overflow: hidden;
+  background-color: #0076D4;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  margin-bottom: 1px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#0076D4;
+  color: white;
+}
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: white;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #D9E2EA;
+  color: black;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+  .column1{
+  float: left;
+  width:15%;
+
+  }
+  .column2 {
+  width: 80%;
+  float: right;
+
+  }
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
-</style>
-  <script src="https://cs-sandbox1.appiancloud.com/suite/tempo/ui/sail-client/embeddedBootstrap.nocache.js" id="appianEmbedded"> </script>
+
+
+    </style>
+    <script src="https://cs-sandbox1.appiancloud.com/suite/tempo/ui/sail-client/embeddedBootstrap.nocache.js"
+            id="appianEmbedded"></script>
 </head>
 <body>
 
 <!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-light-blue">Home</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
-  </div>
+<div class="topnav">
+    <a class="active">Enterprise Risk Management</a>
+    <img  src="https://zeevector.com/wp-content/uploads/Citi-Logo-White-PNG-387x258.png" alt="citiLogo" width="40" height="30">
 </div>
+<hr class="rounded">
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="mainPage">
+    <div class="column1">
+        <ul>
+            <li onclick="gotoHomePage()"><a class="active" href="#home">Breach Metric</a></li>
+            <li><a href="#news">ERM APPS</a></li>
+            <li><a href="#contact">Risk Appetite</a></li>
+            <li><a href="#about">Limits</a></li>
+            <li><a href="#news">Key Risk Indicators</a></li>
+            <li><a href="#contact">Stress Testing</a></li>
+            <li><a href="#about">Lines of Defense</a></li>
+            <li><a href="#about">Risk Taxonomy</a></li>
 
-  <div class="w3-twothird">
-    <appian-action processModelUuid="0002ea28-8e14-8000-cc3c-7f0000014e7a"></appian-action>
-
-  </div>
+        </ul>
+    </div>
+    <div class="column2">
+        <br/>
+        <div class = "alert" id = "success" hidden>
+            <span class="closebtn" onclick="this.parentElement.hidden='true';">&times;</span>
+            Action Completed Successfully
+        </div>
+        <div id="home">
+            <appian-report class="test" id="report" reportUrlStub="45sFQQ"></appian-report>
+        </div>
+        <div id="individualRecord"></div>
+        <div id="taskView"></div>
+        <div id ="action"></div>
+    </div>
 
 </div>
-
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
+var reportURL;
+var recordIdentifier;
+var recordViewUrlStub;
+document.getElementById("report").addEventListener("open-record-link",
+  getRecordView,false);
+
+document.getElementById("report").addEventListener("open-startprocess-link", getAction,false);
+
+document.getElementById("report").addEventListener("open-task-link", getTask,false);
+
+document.getElementById("individualRecord").addEventListener("submit", actionSubmittedRecord,false);
+
+document.getElementById("taskView").addEventListener("submit",actionSubmittedTask,false);
+
+document.getElementById("action").addEventListener("submit",actionSubmittedTask,false);
+
+
+
+  function getRecordView () {
+  event.preventDefault();
+  reportURL = event.detail.recordTypeUrlStub;
+  recordIdentifier = event.detail.recordIdentifier;
+  recordViewUrlStub = event.detail.recordViewUrlStub;
+  document.getElementById("home").style.display = "none";
+  var element = document.getElementById("individualRecord");
+  element.innerHTML="";
+  $('<appian-record-view />').attr({"recordTypeUrlStub":reportURL, "recordIdentifier":recordIdentifier, "recordViewUrlStub":recordViewUrlStub}).on("open-record-link").appendTo("#individualRecord");
+  document.getElementById("individualRecord").style.display = "inline";
   }
-}
+
+  function getAction() {
+  event.preventDefault();
+  var processModel = event.detail.processModelUuid;
+  document.getElementById("home").style.display = "none";
+  var element = document.getElementById("action");
+  element.innerHTML="";
+   $('<appian-action />').attr("processModelUuid", processModel).on("open-startprocess-link").appendTo("#action");
+   document.getElementById("action").style.display = "inline";
+  }
+
+  function getTask() {
+  event.preventDefault();
+  var taskId = event.detail.taskId;
+  document.getElementById("home").style.display = "none";
+  var element = document.getElementById("taskView");
+  element.innerHTML="";
+   $('<appian-task />').attr("taskId", taskId).on("open-task-link").appendTo("#taskView");
+   document.getElementById("taskView").style.display = "inline";
+
+  }
+
+   function actionSubmittedRecord() {
+  event.preventDefault();
+  document.getElementById("action").style.display = "none";
+  var element = document.getElementById("individualRecord");
+  element.innerHTML="";
+  $('<appian-record-view />').attr({"recordTypeUrlStub":reportURL, "recordIdentifier":recordIdentifier, "recordViewUrlStub":recordViewUrlStub}).on("open-record-link").appendTo("#individualRecord");
+  document.getElementById("taskView").style.display = "none";
+document.getElementById("individualRecord").style.display = "inline";
+document.getElementById("home").style.display = "none";
+document.getElementById("success").hidden = false;
+ //$("#individualRecord").load(location.href + " #individualRecord");
+  }
+
+   function actionSubmittedTask() {
+  event.preventDefault();
+  document.getElementById("action").style.display = "none";
+document.getElementById("individualRecord").style.display = "none";
+var element = document.getElementById("report");
+element.innerHTML="";
+$('<appian-report />').attr("reportUrlStub", "45sFQQ").on("submit").appendTo("#report");
+document.getElementById("taskView").style.display = "none";
+document.getElementById("home").style.display = "inline";
+document.getElementById("success").hidden = false;
+ //$("#individualRecord").load(location.href + " #individualRecord");
+  }
+
+
+  function gotoHomePage () {
+document.getElementById("action").style.display = "none";
+document.getElementById("individualRecord").style.display = "none";
+document.getElementById("taskView").style.display = "none";
+document.getElementById("home").style.display = "inline";
+
+  }
+
+
+
 </script>
 
 </body>
